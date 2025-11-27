@@ -1,0 +1,82 @@
+/* Experience Section */
+#experience {
+    padding: var(--spacing);
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    border-bottom: var(--border-thick);
+}
+
+#experience h2 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: white;
+    -webkit-text-stroke: 2px white;
+    text-shadow: 4px 4px 0px var(--accent-color);
+}
+
+.experience-item {
+    border: 2px solid white;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    position: relative;
+    transition: transform 0.2s;
+    background: var(--text-color);
+}
+
+.experience-item:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 8px 8px 0px var(--accent-color);
+    background: #1a1a1a;
+}
+
+.role-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 2px solid white;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.role-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--accent-color);
+}
+
+.company-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.role-date {
+    font-family: monospace;
+    background: white;
+    color: black;
+    padding: 0.2rem 0.5rem;
+    font-weight: bold;
+}
+
+.role-details ul {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.role-details li {
+    margin-bottom: 0.8rem;
+    position: relative;
+}
+
+.role-details li::before {
+    content: ">";
+    position: absolute;
+    left: -1.5rem;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
