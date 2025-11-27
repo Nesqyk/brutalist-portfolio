@@ -6,7 +6,7 @@ const projectsData = [
         description: "Firebase-backed concierge that lets travelers book island tours, rentals, and shuttles in one frictionless React/Vite flow.",
         image: "images/RufbacTourServices.png",
         tags: ["React", "TypeScript", "Firebase", "Tailwind"],
-        url: "https://rufbac.com"
+        url: "https://rufbac-test.netlify.app/"
     },
     {
         id: 2,
@@ -14,7 +14,7 @@ const projectsData = [
         description: "Full-stack disaster response platform connecting requests, volunteers, and hazards on a live Next.js + Google Maps command map.",
         image: "images/KapwaNow.png",
         tags: ["Next.js", "Firebase", "GCP", "Maps API"],
-        url: "https://kapwanow.org"
+        url: "https://kapwanow.netlify.app/"
     },
     {
         id: 3,
@@ -22,7 +22,7 @@ const projectsData = [
         description: "Curated pixel-art shelf powered by Contentful where indie artists filter vetted packs, pop open modals, and jump to creators.",
         image: "images/PixelStash.png",
         tags: ["Next.js", "Contentful", "Sass", "Netlify"],
-        url: "https://pixelstash.art"
+        url: "https://pixelstash.netlify.app/"
     },
     {
         id: 4,
@@ -38,7 +38,7 @@ const projectsData = [
         description: "AI-powered, multilingual weather advisor delivering WhatsApp chatbot tips and risk maps to help farmers prevent drought losses.",
         image: "images/AgriSahayak.png",
         tags: ["AI", "WhatsApp API", "React Native", "TensorFlow Lite"],
-        url: "https://agrisahayak.ai"
+        url: ""
     },
     {
         id: 6,
@@ -46,7 +46,7 @@ const projectsData = [
         description: "Hybrid human-AI building safety assessment suite with Flutter field capture plus LGU dashboards for real-time damage triage.",
         image: "images/StructSure.png",
         tags: ["Flutter", "TensorFlow Lite", "GCP", "AI"],
-        url: "https://structsure.io"
+        url: ""
     }
 ];
 
