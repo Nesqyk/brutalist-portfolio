@@ -2,11 +2,19 @@
     --bg-color: #f0f0f0;
     --text-color: #000000;
     --accent-color: #ff3e00;
+    --component-bg: #ffffff;
     --border-thick: 4px solid var(--text-color);
     --border-thin: 2px solid var(--text-color);
     --font-main: 'Courier New', Courier, monospace;
     --font-heading: 'Impact', 'Arial Black', sans-serif;
     --spacing: 2rem;
+}
+
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --accent-color: #ff3e00;
+    --component-bg: #1e1e1e;
 }
 
 * {
@@ -61,7 +69,7 @@ h1 {
     font-weight: bold;
     border: var(--border-thin);
     padding: 0.5rem;
-    background: white;
+    background: var(--component-bg);
     box-shadow: 5px 5px 0px var(--text-color);
 }
 
@@ -85,7 +93,7 @@ nav {
     justify-content: space-between;
     font-weight: bold;
     text-transform: uppercase;
-    background: #fff;
+    background: var(--component-bg);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -106,6 +114,26 @@ nav a:last-child {
 }
 
 nav a:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    padding: 1.5rem;
+    flex-grow: 1;
+    text-align: center;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+#theme-toggle:hover {
     background-color: var(--accent-color);
     color: white;
 }
@@ -135,7 +163,7 @@ nav a:hover {
 
 /* Projects Section Wrapper */
 #projects-section {
-    background-color: #fff;
+    background-color: var(--component-bg);
     padding: var(--spacing);
 }
 
@@ -227,7 +255,7 @@ a.project-card:focus-visible {
     padding: 0.2rem 0.5rem;
     font-size: 0.8rem;
     text-transform: uppercase;
-    background: white;
+    background: var(--component-bg);
 }
 
 /* Pagination */
@@ -239,7 +267,7 @@ a.project-card:focus-visible {
 }
 
 .page-btn {
-    background: white;
+    background: var(--component-bg);
     border: var(--border-thick);
     padding: 0.5rem 1.5rem;
     font-family: var(--font-heading);
@@ -247,6 +275,7 @@ a.project-card:focus-visible {
     cursor: pointer;
     text-transform: uppercase;
     transition: all 0.2s;
+    color: var(--text-color);
 }
 
 .page-btn:hover:not(:disabled) {
@@ -306,7 +335,7 @@ footer {
     text-transform: uppercase;
     font-family: var(--font-heading);
     font-size: 1.5rem;
-    border: 4px solid white;
+    border: 4px solid var(--bg-color);
     transition: all 0.2s;
 }
 
@@ -314,7 +343,7 @@ footer {
     background: var(--accent-color);
     color: white;
     border-color: var(--accent-color);
-    box-shadow: 8px 8px 0px white;
+    box-shadow: 8px 8px 0px var(--bg-color);
     transform: translate(-4px, -4px);
 }
 
@@ -329,14 +358,14 @@ footer {
 
 .social-links a {
     display: inline-block;
-    background: black;
-    color: white;
+    background: var(--text-color);
+    color: var(--bg-color);
     padding: 1rem 2rem;
     text-decoration: none;
     font-family: var(--font-heading);
     font-size: 1.2rem;
     text-transform: uppercase;
-    border: 2px solid white;
+    border: 2px solid var(--bg-color);
     position: relative;
     transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -344,9 +373,9 @@ footer {
 .social-links a:hover {
     transform: translate(-4px, -4px);
     box-shadow: 6px 6px 0px var(--accent-color);
-    background: white;
-    color: black;
-    border-color: black;
+    background: var(--bg-color);
+    color: var(--text-color);
+    border-color: var(--text-color);
 }
 
 /* Responsive */
@@ -357,6 +386,10 @@ footer {
     nav a {
         border-right: none;
         border-bottom: var(--border-thin);
+    }
+    #theme-toggle {
+        border-bottom: var(--border-thin);
+        width: 100%;
     }
     h1 {
         font-size: 4rem;

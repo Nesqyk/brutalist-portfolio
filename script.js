@@ -136,4 +136,22 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(() => {
         timeDiv.innerText = "SYSTEM TIME: " + new Date().toISOString().toUpperCase();
     }, 1000);
+
+    // Theme Toggle Logic
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    
+    // Check saved theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        body.classList.add('dark-mode');
+        themeToggle.innerText = "LIGHT";
+    }
+
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        const isDark = body.classList.contains('dark-mode');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        themeToggle.innerText = isDark ? "LIGHT" : "DARK";
+    });
 });
